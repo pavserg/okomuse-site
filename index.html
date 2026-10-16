@@ -1,110 +1,283 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>document.documentElement.className+=" js"</script>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OKOMUSE</title>
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OKOMUSE — Your music, wherever it lives</title>
+<meta name="description" content="OKOMUSE is a music and audiobook player for iPhone. Play your own files from your device, Dropbox, Google Drive, OneDrive, Box and WebDAV — with offline downloads, a 10-band equalizer, playlists and more.">
+<meta name="theme-color" content="#05071a">
+<link rel="canonical" href="https://okomuse.site/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OKOMUSE">
+<meta property="og:title" content="OKOMUSE — Your music, wherever it lives">
+<meta property="og:description" content="One player for the music on your iPhone and in your cloud. Stream or download, shape the sound, pick up where you left off.">
+<meta property="og:url" content="https://okomuse.site/">
+<meta property="og:image" content="https://okomuse.site/assets/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "OKOMUSE",
+  "operatingSystem": "iOS",
+  "applicationCategory": "MusicApplication",
+  "url": "https://okomuse.site/",
+  "image": "https://okomuse.site/assets/icon-512.png",
+  "description": "A music and audiobook player for the files on your iPhone and in your cloud storage."
 }
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #fafafa;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-}
-
-.tagline {
-  font-size: 1.3em;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-a {
-  color: #0066cc;
-  text-decoration: none;
-  font-size: 1.1em;
-  padding: 10px 20px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  background: #0066cc;
-  color: white;
-}
-
-footer {
-  text-align: center;
-  margin-top: 80px;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-  color: #666;
-  font-size: 0.9em;
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  .tagline {
-    font-size: 1.1em;
-  }
-
-  nav {
-    gap: 15px;
-  }
-}
-</style>
+</script>
 </head>
-
 <body>
+<div class="glow" aria-hidden="true"></div>
 
-<div class="container">
-  <header>
-    <h1>OKOMUSE</h1>
-    <p class="tagline">Your music, from your device and your cloud</p>
-  </header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.5-8.97A6 6 0 0 1 18 8.5a4 4 0 0 1-.5 9.5H7z"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A1.5 1.5 0 0 1 4.5 6H9l2 2h8.5A1.5 1.5 0 0 1 21 9.5v8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.6 16a5 5 0 0 1 6.8 0"/><circle cx="12" cy="19.2" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="7" rx="2"/><rect x="3.5" y="13" width="17" height="7" rx="2"/><path d="M7.5 7.5h.01M7.5 16.5h.01"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v8M8.5 12.5 12 16l3.5-3.5"/></symbol>
+    <symbol id="i-eq" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v16M12 4v16M18 4v16"/><rect x="4" y="13" width="4" height="3" rx="1" fill="currentColor"/><rect x="10" y="7" width="4" height="3" rx="1" fill="currentColor"/><rect x="16" y="11" width="4" height="3" rx="1" fill="currentColor"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17a8.5 8.5 0 1 1 16 0"/><path d="m12 14 4-5"/><circle cx="12" cy="14.5" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h1.5M6.5 8v8M10 5v14M13.5 9v6M17 6.5v11M20.5 12H21"/></symbol>
+    <symbol id="i-radio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.8" fill="currentColor"/><path d="M8.2 8.2a5.4 5.4 0 0 0 0 7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6M5.3 5.3a9.5 9.5 0 0 0 0 13.4M18.7 5.3a9.5 9.5 0 0 1 0 13.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h11a1 1 0 0 1 1 1v16l-6.5-4.5-6.5 4.5v-16a1 1 0 0 1 1-1z"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5h10M4 11.5h10M4 16.5h6"/><circle cx="17" cy="17" r="2.5"/><path d="M19.5 17V7l2-1"/></symbol>
+    <symbol id="i-resume" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4h4"/><path d="m10.5 9 4.5 3-4.5 3z" fill="currentColor"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.8-4.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8 7.5 9.5 4.3-1.5 7.5-5 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24" fill="currentColor"><path d="M16.37 12.6c-.02-2.1 1.72-3.12 1.8-3.17-.98-1.43-2.5-1.63-3.05-1.65-1.3-.13-2.53.76-3.19.76-.66 0-1.67-.74-2.75-.72-1.41.02-2.72.82-3.45 2.09-1.47 2.55-.38 6.33 1.06 8.4.7 1.01 1.54 2.15 2.63 2.11 1.06-.04 1.46-.68 2.73-.68 1.28 0 1.64.68 2.75.66 1.14-.02 1.86-1.03 2.55-2.05.8-1.17 1.13-2.31 1.15-2.37-.03-.01-2.2-.85-2.23-3.38zM14.3 6.43c.58-.71.98-1.69.87-2.68-.84.03-1.86.56-2.46 1.27-.54.62-1.01 1.62-.89 2.58.94.07 1.9-.48 2.48-1.17z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+  </defs>
+</svg>
 
-  <nav>
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-  </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="30" height="30">OKOMUSE</a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#premium">Premium</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
 
-  <footer>
-    <p>&copy; 2026 OKOMUSE. All rights reserved.</p>
-  </footer>
-</div>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <img class="hero-icon" src="assets/icon-512.png" alt="OKOMUSE app icon" width="132" height="132">
+      <span class="eyebrow">Music &amp; audiobook player for iPhone</span>
+      <h1>Your music.<br><span class="grad-text">Wherever it lives.</span></h1>
+      <p class="lead">OKOMUSE brings the songs on your iPhone and the files in your cloud into one beautiful library. Stream them, download them, shape their sound — and pick up right where you left off.</p>
+      <div class="cta">
+        <span class="btn btn-primary btn-store" aria-label="Coming soon on the App Store">
+          <svg><use href="#i-apple"/></svg>
+          <span><small>Coming soon on the</small>App Store</span>
+        </span>
+        <a class="btn btn-ghost" href="#features">Explore features</a>
+      </div>
+    </div>
+  </section>
 
+  <section id="sources">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>One library for every source</h2>
+        <p>Connect the places your music already lives. OKOMUSE scans them, reads tags and artwork, and builds a single library you can browse by artist, album, genre or folder.</p>
+      </div>
+      <div class="chips reveal">
+        <span class="chip"><svg><use href="#i-phone"/></svg>iPhone music library</span>
+        <span class="chip"><svg><use href="#i-folder"/></svg>Files on your device</span>
+        <span class="chip warm"><svg><use href="#i-wifi"/></svg>Wi-Fi import from a computer</span>
+        <span class="chip"><svg><use href="#i-cloud"/></svg>Dropbox</span>
+        <span class="chip"><svg><use href="#i-cloud"/></svg>Google Drive</span>
+        <span class="chip"><svg><use href="#i-cloud"/></svg>OneDrive</span>
+        <span class="chip"><svg><use href="#i-cloud"/></svg>Box</span>
+        <span class="chip warm"><svg><use href="#i-server"/></svg>WebDAV</span>
+        <span class="chip warm"><svg><use href="#i-server"/></svg>ownCloud</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Made for listening, not for managing</h2>
+        <p>Everything you expect from a great player, plus the details that make long albums, audiobooks and podcasts a pleasure.</p>
+      </div>
+      <div class="grid">
+        <article class="card wide reveal">
+          <div class="icon"><svg><use href="#i-download"/></svg></div>
+          <h3>Stream or keep it offline</h3>
+          <p>Play straight from the cloud, or download a track, a folder or a whole playlist for flights, subways and anywhere without signal. Recently played tracks are cached automatically, so they start instantly next time.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon warm"><svg><use href="#i-eq"/></svg></div>
+          <h3>10-band equalizer</h3>
+          <p>Shape your sound and save presets for headphones, car or speakers.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg><use href="#i-book"/></svg></div>
+          <h3>Book mode</h3>
+          <p>Skip back and forward by 10 or 15 seconds — in the player and on the Lock Screen. Built for audiobooks and podcasts.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon warm"><svg><use href="#i-resume"/></svg></div>
+          <h3>Pick up where you left off</h3>
+          <p>OKOMUSE remembers your position and can drop a bookmark every time you pause.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg><use href="#i-bookmark"/></svg></div>
+          <h3>Bookmarks</h3>
+          <p>Mark any moment in a track — a chapter, a solo, a quote — and jump back to it later.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon warm"><svg><use href="#i-gauge"/></svg></div>
+          <h3>Playback speed</h3>
+          <p>Listen faster or slower without losing your place. Perfect for lectures and long reads.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg><use href="#i-wave"/></svg></div>
+          <h3>Gapless playback</h3>
+          <p>Live albums and DJ mixes flow from one track to the next without a gap of silence.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon warm"><svg><use href="#i-radio"/></svg></div>
+          <h3>Radio</h3>
+          <p>An endless mix built from your own library. Press play and rediscover what you already own.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg><use href="#i-list"/></svg></div>
+          <h3>Playlists</h3>
+          <p>Build mixes from any source and sync them through your own cloud storage.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon warm"><svg><use href="#i-moon"/></svg></div>
+          <h3>Sleep timer</h3>
+          <p>Fall asleep to your music. Playback stops on its own when the timer ends.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg><use href="#i-search"/></svg></div>
+          <h3>Find anything in seconds</h3>
+          <p>Search your whole library by title, artist or album. Browse by folder when you know where something lives, or by tags when you don't.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="premium">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Start free. Go Premium when you're ready.</h2>
+        <p>Try OKOMUSE with your own music at no cost. Unlock the full player with OKOMUSE Premium — monthly, quarterly or yearly.</p>
+      </div>
+      <div class="plans">
+        <div class="plan reveal">
+          <h3>Free</h3>
+          <p class="sub">Everything you need to get started.</p>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>Up to 20 tracks in your library</li>
+            <li><svg><use href="#i-check"/></svg>Connect any supported source</li>
+            <li><svg><use href="#i-check"/></svg>Streaming playback with Lock Screen controls</li>
+            <li><svg><use href="#i-check"/></svg>Search, queue and folder browsing</li>
+            <li><svg><use href="#i-check"/></svg>Wi-Fi import from your computer</li>
+          </ul>
+        </div>
+        <div class="plan premium reveal">
+          <h3><span class="grad-text">OKOMUSE Premium</span></h3>
+          <p class="sub">The complete player, with no limits.</p>
+          <ul>
+            <li><svg><use href="#i-check"/></svg>Unlimited library</li>
+            <li><svg><use href="#i-check"/></svg>Offline downloads</li>
+            <li><svg><use href="#i-check"/></svg>10-band equalizer and presets</li>
+            <li><svg><use href="#i-check"/></svg>Playlists, bookmarks and Radio</li>
+            <li><svg><use href="#i-check"/></svg>Book mode, playback speed, gapless playback</li>
+            <li><svg><use href="#i-check"/></svg>Restore last position, bookmark on pause, sleep timer</li>
+          </ul>
+          <p class="note">Prices are shown in the app in your local currency. Subscriptions renew automatically and can be cancelled anytime in your Apple Account settings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div class="band reveal">
+        <div>
+          <h2>Your library stays yours.</h2>
+          <p>OKOMUSE talks directly to your cloud storage. Your files never pass through our servers — we don't run any that store your music.</p>
+          <p><a href="privacy.html">Read the Privacy Policy →</a></p>
+        </div>
+        <ul class="checks">
+          <li><svg><use href="#i-user"/></svg><div><strong>No account required</strong><span>No sign-up, no email, no phone number.</span></div></li>
+          <li><svg><use href="#i-lock"/></svg><div><strong>Credentials in the iOS Keychain</strong><span>Access to your cloud accounts is stored securely on your device.</span></div></li>
+          <li><svg><use href="#i-shield"/></svg><div><strong>Never sold, never shared with advertisers</strong><span>Your playlists, bookmarks and history live on your iPhone.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="wrap">
+      <div class="facts">
+        <div class="fact reveal">
+          <div class="k">Formats</div>
+          <div class="tags"><span class="tag">MP3</span><span class="tag">AAC</span><span class="tag">M4A</span><span class="tag">ALAC</span><span class="tag">FLAC</span><span class="tag">WAV</span><span class="tag">AIFF</span><span class="tag">OGG</span><span class="tag">OPUS</span></div>
+        </div>
+        <div class="fact reveal">
+          <div class="k">Languages</div>
+          <div class="v">English, Українська, Polski, Deutsch, Español, Français</div>
+        </div>
+        <div class="fact reveal">
+          <div class="k">Works with</div>
+          <div class="v">iPhone · Lock Screen &amp; Control Center · AirPods and Bluetooth audio</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap reveal">
+      <h2>All your music.<br><span class="grad-text">One player.</span></h2>
+      <p>OKOMUSE is coming soon to the App Store. Questions in the meantime? We'd love to hear from you.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="support.html"><svg><use href="#i-mail"/></svg>Contact support</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 OKOMUSE. All rights reserved.</span>
+    <nav aria-label="Footer">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
 </body>
 </html>
